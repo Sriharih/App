@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In Form</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f4f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.farmer-emoji {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px 2px #00000033;
+}
+
+button[type="submit"] {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.sign-in-via {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sign-in-via p {
+    margin-bottom: 10px;
+}
+
+.google-signin,
+.email-signin {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.google-signin img,
+.email-signin img {
+    width: 30px;
+    height: 30px;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>"WELCOME, YOU ARE THE PRIDE OF THE WORLD" <span class="farmer-emoji">👨‍🌾</span></h1>
+        <h2>SIGN-IN TO EXPLORE MORE!</h2>
+        <form>
+            <label for="username">USERNAME</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="contact">CONTACT</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <label for="email">EMAIL-ID</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">PASSWORD</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit">SUBMIT</button>
+
+            <div class="sign-in-via">
+                <p>SIGN-IN VIA:</p>
+                <button type="button" class="google-signin">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google Sign-In">
+                </button>
+                <button type="button" class="email-signin">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Gmail_Icon.svg/512px-Gmail_Icon.svg.png" alt="Email Sign-In">
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
