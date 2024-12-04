@@ -17,31 +17,72 @@
 
         .container {
             text-align: center;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+        }
+
+        .container.visible {
+            opacity: 1;
+            transform: scale(1);
         }
 
         .logo {
-            width: 150px;
+            width: 200px;
             height: auto;
         }
 
         .title {
             font-size: 24px;
+            font-weight: bold;
             color: #333;
             margin-top: 20px;
+        }
+
+        .loading-bar {
+            width: 100%;
+            height: 4px;
+            background-color: #ddd;
+            overflow: hidden;
+            margin-top: 20px;
+            border-radius: 2px;
+        }
+
+        .loading-bar div {
+            width: 0;
+            height: 100%;
+            background-color: #007bff;
+            animation: loading 2s linear infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
         }
     </style>
     <script>
         function redirectToLogin() {
+            const container = document.querySelector('.container');
+            container.classList.add('visible');
             setTimeout(function() {
                 window.location.href = "login.html"; // Change this to the path of your sign-in form
             }, 2000);
         }
+
+        window.onload = redirectToLogin;
     </script>
 </head>
-<body onload="redirectToLogin()">
+<body>
     <div class="container">
         <img src="logo.jpg" alt="AGRIPRO Logo" class="logo">
         <div class="title">AGRIPRO</div>
+        <div class="loading-bar">
+            <div></div>
+        </div>
     </div>
 </body>
-</html
+</html>
